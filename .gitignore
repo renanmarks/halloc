@@ -1,0 +1,6 @@
+*.o
+*.iso
+*.bin
+*.log
+CMakeLists.txt.user
+build/

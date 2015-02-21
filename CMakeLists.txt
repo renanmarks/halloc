@@ -1,0 +1,7 @@
+project(libhalloc)
+cmake_minimum_required(VERSION 2.8)
+add_library(hmalloc SHARED src/malloc.c)
+add_library(hmalloc_linux SHARED src/linux.c)
+target_link_libraries(hmalloc hmalloc_linux)
+add_executable(${PROJECT_NAME} src/main.c src/main_test.c)
+target_link_libraries(${PROJECT_NAME} hmalloc)
